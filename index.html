@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعرف على بلدان العالم وثرواتهم</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+        }
+        .country {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>تعرف على بلدان العالم وثرواتهم</h1>
+    </header>
+    <main>
+        <div id="countries-list">
+            <!-- سيتم إضافة البلدان هنا ديناميكيًا -->
+        </div>
+    </main>
+    <script>
+        const countries = [
+            { name: 'الولايات المتحدة الأمريكية', gdp: '23 تريليون دولار' },
+            { name: 'الصين', gdp: '17 تريليون دولار' },
+            { name: 'اليابان', gdp: '5 تريليون دولار' },
+            { name: 'ألمانيا', gdp: '4 تريليون دولار' },
+            { name: 'الهند', gdp: '3 تريليون دولار' },
+            // يمكنك إضافة المزيد من البلدان هنا
+        ];
+
+        const countriesList = document.getElementById('countries-list');
+
+        countries.forEach(country => {
+            const countryDiv = document.createElement('div');
+            countryDiv.className = 'country';
+            countryDiv.innerHTML = `<h2>${country.name}</h2><p>الناتج المحلي الإجمالي: ${country.gdp}</p>`;
+            countriesList.appendChild(countryDiv);
+        });
+    </script>
+</body>
+</html>
